@@ -29,8 +29,8 @@ class Main:
 			"form",{
 				"method":"post"
 			}
-		)
-		data=[]
+		)["action"]
+		data={}
 		dstg = [
 			"fb_dtsg","jazoest"
 		]
@@ -56,7 +56,7 @@ class Main:
 		)
 		for x in range(jumlah):
 			kirim = session.post(
-			"https://mbasic.facebook.com"+link.get("action"),data=data,cookies=coki, headers=headers
+			"https://mbasic.facebook.com"+action,data=data,cookies=coki, headers=headers
 			)
 			x+=1
 			if "Anda Tidak Dapat Berkomentar Saat Ini" in kirim.text:
