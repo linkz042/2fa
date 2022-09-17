@@ -56,7 +56,7 @@ class Main:
 		)
 		for x in range(jumlah):
 			kirim = session.post(
-			"https://mbasic.facebook.com"+action,data=data,cookies=coki, headers=headers
+			"https://mbasic.facebook.com"+link,data=data,cookies=coki, headers=headers
 			)
 			x+=1
 			if "Anda Tidak Dapat Berkomentar Saat Ini" in kirim.text:
